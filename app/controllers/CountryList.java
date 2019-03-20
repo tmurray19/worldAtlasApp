@@ -13,5 +13,4 @@ import models.*;
 
 public class CountryList extends Controller {
 	
-	
 }

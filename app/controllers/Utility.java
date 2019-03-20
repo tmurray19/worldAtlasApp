@@ -66,12 +66,14 @@ public class Utility {
 	}
 	
 	// Gets the list of countries in the json file
-	public static void getCountries() {
+	public static String getCountries() {
+		String countryList = "";
 		JSONArray countries = (JSONArray) FileParser.dataSetter().get("countries");
 		for(int i = 0, size = countries.size(); i < size; i++) {
 			JSONObject objectInArray = (JSONObject) countries.get(i);
-			System.out.println(objectInArray.get("name"));
+			countryList += (objectInArray.get("name")) + "\n";
 		}
+		return countryList;
 	}
 	
 	// Checks if you've reached your destination
