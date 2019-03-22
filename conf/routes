@@ -11,5 +11,16 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+# For list printout
+GET     /countries/                             Application.countryList()
+
+
+# For trip Planner
+GET     /trip_planner/                          Application.tripPlanner
+
+# Import CRUD routes
+*     /admin                                    module:crud
+
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

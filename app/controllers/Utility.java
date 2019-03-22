@@ -2,11 +2,9 @@ package controllers;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import models.City;
-import models.Country;
-
 import java.util.ArrayList;
+
+import models.*;
 
 // Decided to define a utility class to handle and hold various functions
 // I felt these functions could be fit into the Country class
@@ -66,14 +64,12 @@ public class Utility {
 	}
 	
 	// Gets the list of countries in the json file
-	public static String getCountries() {
-		String countryList = "";
+	public static void getCountries() {
 		JSONArray countries = (JSONArray) FileParser.dataSetter().get("countries");
 		for(int i = 0, size = countries.size(); i < size; i++) {
 			JSONObject objectInArray = (JSONObject) countries.get(i);
-			countryList += (objectInArray.get("name")) + "\n";
+			System.out.println(objectInArray.get("name"));
 		}
-		return countryList;
 	}
 	
 	// Checks if you've reached your destination

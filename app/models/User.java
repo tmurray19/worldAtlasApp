@@ -1,49 +1,16 @@
 package models;
- 
-import java.util.*;
-import javax.persistence.*;
- 
+
+import play.*;
 import play.db.jpa.*;
+ 
+import javax.persistence.*;
+import java.util.*;
  
 @Entity
 public class User extends Model {
- 
-    public String email;
-    public String password;
-    public String fullname;
-    public boolean isAdmin;
-    
-    public User(String email, String password, String fullname) {
-        this.email = email;
-        this.password = password;
-        this.fullname = fullname;
-        this.isAdmin = false;
-    }
-
-    public String getEmail() {
-    	return email;
-    }
-    public void setEmail(String email) {
-    	this.email = email;
-	}
-
-    public String getPassword() {
-    	return password;
-    }
-
-    public void setPassword(String password) {
-    	this.password = password;
-    }
-    
-    public void becomeAdmin() {
-    	this.isAdmin = true;
-    }
-    
-    public void removeAdmin() {
-    	this.isAdmin = false;
-    }
-    
-    public boolean adminStatus() {
-    	return this.isAdmin;
-    }
+ 	
+	public String name;
+	public String email;
+	public String address;
+ 	
 }

@@ -9,16 +9,29 @@ import models.*;
 
 public class Application extends Controller {
 
+    // Renders index page
     public static void index() {
         render();
     }
 
+
+    // Renders say hello page (TESTING)
     public static void sayHello(String myName){
         render(myName);
     }
-    
-    public static void countryList() {
-    	render();
+
+
+    // Renders country list
+    public static void countryList(String s) {
+    	s = "Test";
+    	ArrayList<String> arr = new ArrayList<>();
+    	arr.add(s);
+        render(arr);
     }
 
+    // Renders trip planner
+    public static void tripPlanner(){
+      render();
+    }
+    
 }
