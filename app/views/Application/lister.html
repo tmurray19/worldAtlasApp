@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+#{set title:'Country List' /}
+
+
+<H1>Here is a list of countries avaiable:</H1>
+<p>${j ?: 'guest'}</p>
+
+<ul>@{for(Country C -> Utilites.getCountries()){
+     <li>C.getName</li>
+ }}
+</ul>
+
+
+
+<div>
+    <h2>Countries</h2>
+    #{if c}
+        <div >
+            There are <strong>${c.size()}</strong> countries
+
+            <table style="width:100%">
+                <tr>
+                    <th>Country Name</th>
+                </tr>
+                #{list items:c, as:'co'}
+                <tr>
+                    <td>${co.getName()}</td>
+                 </tr>
+                #{/list}
+            </table>
+        </div>
+    #{/if}
+    #{else}
+        <div>
+            Unfortunately, there are no accounts in the database.
+        </div>
+    #{/else}
+</div>

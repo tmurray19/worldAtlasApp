@@ -1,8 +1,5 @@
 package models;
 
-import java.io.FileReader;
-import java.io.IOException;
-
 // This needs to print out population
 // Print out bordering countries
 
@@ -11,20 +8,23 @@ import java.util.ArrayList;
  
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
- 
+import controllers.FileParser;
 
 
+import javax.persistence.*;
+
+import play.db.jpa.*;
+
+
+
+@Entity
 public class Country extends Area{
 	//Country Class
 	
 	//Initialising variables
 	private ArrayList<City> cities = new ArrayList<>();
 	
-    JSONParser parser = new JSONParser();
-
 	// Add a city to the city arrayList
 	public void addCity(City c) {
 		cities.add(c);
@@ -88,20 +88,13 @@ public class Country extends Area{
 		//Initialise Data
 		setName(name);
 		//Add the countries' cities from json file to arraylist
-
+		
 		// Adding cities to arraylist
 		
 		// A rather dirty solution, but my knowledge with JSON is limited
 		// Please cut me a little slack, I'm learning as I'm coding here
 		
-		Object object = null;
-		try {
-			object = parser.parse(new FileReader("/conf/cities.json"));
-		} catch (IOException | ParseException e) {
-			e.printStackTrace();
-		}
-		JSONObject obj = (JSONObject) object;
-		JSONArray country = (JSONArray) obj.get("countries");
+		JSONArray country = (JSONArray) FileParser.dataSetter().get("countries");
 		for(Object j: country) {
 			// Cast j as a JSONObject
 			JSONObject h = (JSONObject) j;

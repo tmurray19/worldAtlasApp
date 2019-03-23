@@ -64,12 +64,24 @@ public class Utility {
 	}
 	
 	// Gets the list of countries in the json file
-	public static void getCountries() {
+	
+	// TODO:
+	// funcion has been edited to return arraylist containing countries
+	// the slack can be picked up elsewhere to display the countries as a clickable list
+	// i'll figure that out later
+	public static String getCountries() {
+		String h="";
+		ArrayList<Country> countryList = new ArrayList<>(); 
 		JSONArray countries = (JSONArray) FileParser.dataSetter().get("countries");
 		for(int i = 0, size = countries.size(); i < size; i++) {
 			JSONObject objectInArray = (JSONObject) countries.get(i);
-			System.out.println(objectInArray.get("name"));
+			//System.out.println(objectInArray.get("name"));
+			String s = (String) objectInArray.get("name");
+			Country jsonCountry = new Country(s);
+			countryList.add(jsonCountry);
+			h += (objectInArray.get("name") + "\n");
 		}
+		return h;
 	}
 	
 	// Checks if you've reached your destination

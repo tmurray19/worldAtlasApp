@@ -16,6 +16,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="play.server.Server"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="countriesApp"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" -noverify -Xdebug -Xrunjdwp:transport=dt_socket,address=0,server=y,suspend=n -Dplay.debug=yes -Dplay.id=test -Dapplication.path=&quot;${project_loc:countriesApp}&quot; -Djava.endorsed.dirs=&quot;E:\Programming\play1-1.5.2/framework/endorsed&quot; -javaagent:&quot;E:\Programming\play1-1.5.2/framework/play-1.5.x-localbuild.jar&quot;"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" -noverify -Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -Dplay.debug=yes -Dplay.id=test -Dapplication.path=&quot;${project_loc:countriesApp}&quot; -Djava.endorsed.dirs=&quot;E:\Programming\play1-1.5.2/framework/endorsed&quot; -javaagent:&quot;E:\Programming\play1-1.5.2/framework/play-1.5.x-localbuild.jar&quot;"/>
 </launchConfiguration>
 

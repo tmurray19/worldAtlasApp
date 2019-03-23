@@ -1,10 +1,16 @@
 package models;
 import java.util.ArrayList;
 
+import javax.persistence.*;
+
+import play.db.jpa.*;
+
+
 
 
 // An attempt at implementing polymorphism into the project
-public class Area {
+@Entity
+public class Area extends Model{
 	// Initialising variables
 	// Has to be initialised as 0 here, so that values can be added correctly down the hirearchy
 	private long population = 0;

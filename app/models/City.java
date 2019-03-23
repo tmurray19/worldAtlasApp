@@ -1,17 +1,17 @@
 package models;
 
-import org.json.simple.parser.*;
-
-import java.io.FileReader;
-import java.io.IOException;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import controllers.FileParser;
+
+import javax.persistence.*;
+
+import play.db.jpa.*;
+
+@Entity
 public class City extends Area{
 	
-    JSONParser parser = new JSONParser();
-    
 	//Variable Initialisation
 	private boolean capital;
 	
@@ -25,14 +25,7 @@ public class City extends Area{
 		 * This could be done better. It's really inefficient to check through each object. It's pretty
 		 * much O(n). Come back and fix this if you have the time.
 		 */
-		Object object = null;
-		try {
-			object = parser.parse(new FileReader("/conf/cities.json"));
-		} catch (IOException | ParseException e) {
-			e.printStackTrace();
-		}
-		JSONObject obj = (JSONObject) object;
-		JSONArray country = (JSONArray) obj.get("countries");
+		JSONArray country = (JSONArray) FileParser.dataSetter().get("countries");
 		// Runs through JSON file looking for data it needs to
 		for(Object j: country) {
 			// Cast j as a JSONObject

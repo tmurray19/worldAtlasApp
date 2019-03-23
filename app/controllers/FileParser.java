@@ -13,7 +13,7 @@ public class FileParser {
 	public static JSONObject dataSetter() {
 		try {
 			//Read json file as object
-			Object obj = parser.parse(new FileReader("src/cities.json"));
+			Object obj = parser.parse(new FileReader("conf/cities.json"));
 
 			//Cast as JSONObject
 			JSONObject jsonCities = (JSONObject) obj;
