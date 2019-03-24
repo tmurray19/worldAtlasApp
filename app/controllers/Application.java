@@ -23,10 +23,8 @@ public class Application extends Controller {
 
     // Renders country list
     public static void countryList(String s) {
-    	s = "Test";
-    	ArrayList<String> arr = new ArrayList<>();
-    	arr.add(s);
-        render(arr);
+    	List <Country> c = Country.findAll();
+    	render(c);
     }
 
     // Renders trip planner
@@ -36,8 +34,6 @@ public class Application extends Controller {
     
     
     public static void lister() {
-    	List <Country> c = Country.findAll();
-    	render(c);
     }
     
     

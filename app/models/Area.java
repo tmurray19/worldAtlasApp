@@ -13,7 +13,7 @@ import play.db.jpa.*;
 public class Area extends Model{
 	// Initialising variables
 	// Has to be initialised as 0 here, so that values can be added correctly down the hirearchy
-	private long population = 0;
+	private long population;
 	private String name;
 	private ArrayList<String> pointsOfInterest = new ArrayList<>();
 	

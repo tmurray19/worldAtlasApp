@@ -2,6 +2,6 @@
 # For example, for French create a messages.fr file
 #
 
-name = Name
+name = Username
 email = Email Address
-address = Postal Address
+password = Password

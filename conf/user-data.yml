@@ -1,0 +1,17 @@
+# Test data
+
+User(alpha):
+    email:          alpha@test.com
+    password:       secret
+    name:           Admin
+    isAdmin:        true
+
+User(beta):
+    email:          beta@test.com
+    password:       secret
+    name:           Beta
+
+User(gamma):
+    email:          gamma@test.com
+    password:       secret
+    name:           Gamma

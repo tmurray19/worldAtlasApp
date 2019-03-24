@@ -1,6 +1,34 @@
 #{extends 'main.html' /}
 #{set title:'Country List' /}
 
+<div>
+    <h2>Countries</h2>
+    #{if c}
+        <div >
+            There are <strong>${c.size()}</strong> countries
 
-<H1>Here is a list of countries avaiable:</H1>
-<p>Hello ${s ?: 'guest'}</p>
+            <table>
+                <tr>
+                    <th>Country Name</th>
+                    <th>Capital City</th>
+                    <th>Cities</th>
+                    <th>Population</th>
+                    <th>Borders</th>
+                </tr>
+                #{list items:c, as:'co'}
+                <tr>
+                    <td>${co.name}</td>
+                    <td>${co.capital}</td>
+                    <td>${co.cities}<td>
+                    <td>${co.bordering}</td>
+                 </tr>
+                #{/list}
+            </table>
+        </div>
+    #{/if}
+    #{else}
+        <div>
+            We couldn't find any countries.
+        </div>
+    #{/else}
+</div>

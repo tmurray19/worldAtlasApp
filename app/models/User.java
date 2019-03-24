@@ -1,3 +1,4 @@
+// User model
 package models;
 
 import play.*;
@@ -20,13 +21,15 @@ public class User extends Model {
 	public String email;
 	
 	//@Required
-	//@MaxSize(1000)
-	public String address;
+	//@MaxSize(128)
+	public String password;
 	
-	public User(String name, String email, String address) {
+	public boolean isAdmin;
+	
+	public User(String name, String email, String password) {
 		this.name = name;
 		this.email = email;
-		this.address = address;
+		this.password = password;
 	}
 
 	public String getName() {
@@ -45,12 +48,15 @@ public class User extends Model {
 		this.email = email;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getpassword() {
+		return password;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setpassword(String password) {
+		this.password = password;
 	}
 	
+    public static User connect(String email, String password) {
+        return find("byEmailAndPassword", email, password).first();
+    }
 }

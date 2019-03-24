@@ -69,6 +69,8 @@ public class Utility {
 	// funcion has been edited to return arraylist containing countries
 	// the slack can be picked up elsewhere to display the countries as a clickable list
 	// i'll figure that out later
+	
+	/*
 	public static String getCountries() {
 		String h="";
 		ArrayList<Country> countryList = new ArrayList<>(); 
@@ -77,12 +79,14 @@ public class Utility {
 			JSONObject objectInArray = (JSONObject) countries.get(i);
 			//System.out.println(objectInArray.get("name"));
 			String s = (String) objectInArray.get("name");
-			Country jsonCountry = new Country(s);
+			Country jsonCountry = new Country(s, 0);
 			countryList.add(jsonCountry);
 			h += (objectInArray.get("name") + "\n");
 		}
 		return h;
 	}
+	
+	*/
 	
 	// Checks if you've reached your destination
 	public static boolean areWeThereYet(City a, City Dest) {
@@ -122,6 +126,8 @@ public class Utility {
 	// These could have been embedded somewhere in the web, but
 	// It's much easier to host them here, with the other utility functions
 	
+	
+	/*
 	// Check if two counties are capital
 	public static boolean flyFrom(City a, City b) {
 		if(a.getCapital() && b.getCapital()) {
@@ -131,6 +137,7 @@ public class Utility {
 			return false;
 		}
 	}
+	*/
 	
 	public static boolean busFrom(Country conA, City cityA, Country conB, City cityB) {
 		if((conA.getName().equals(conB.getName())) && !(cityA.getName().equals(cityB.getName()))) {

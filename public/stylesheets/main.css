@@ -1,6 +1,6 @@
 body{
-  background-color: #5C97FF;
-  font-family: sans-serif;
+  background-color: paleturquoise;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 
@@ -8,4 +8,87 @@ body{
     position: absolute;
     bottom: 30px;
     width: 100%;
+}
+
+
+
+div.detail {
+	font-size: 20px;
+	text-align: center;
+	background-color: white;
+	border: 4px solid black;
+}
+
+
+div.box {
+	font-size: 20px;
+	background-color: white;
+	border: 4px solid black;
+}
+
+
+a.button {
+	position: absolute;
+	bottom: 10px;
+	border: none;
+	background-color: inherit;
+	padding: 14px; 28px;
+	font-size: 25px;
+	cursor: pointer;
+	color: black;
+}
+
+a.button:hover {
+	background-color: black;
+	color: white;
+
+}
+
+a.buttonRight {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	border: none;
+	background-color: inherit;
+	padding: 14px; 28px;
+	font-size: 25px;
+	cursor: pointer;
+	color: black;
+}
+
+a.buttonRight:hover {
+	background-color: black;
+	color: white;
+
+}
+
+
+a.buttonRegular {
+	border: none;
+	background-color: inherit;
+	font-size: 25px;
+	cursor: pointer;
+	color: black;
+
+}
+
+a.buttonRegular:hover {
+	background-color: black;
+	color: white;
+
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

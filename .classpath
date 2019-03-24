@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="crud"/>
 	<classpathentry kind="src" path="docviewer"/>
+	<classpathentry kind="src" path="secure"/>
 	
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="E:\Programs\play-1.5.2\framework\play-1.5.2.jar" sourcepath="E:/programs/play-1.5.2/framework/src" />

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Administration</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        #{get 'moreStyles' /}
+        <link rel="stylesheet" type="text/css" media="screen"
+                href="@{'/public/stylesheets/main.css'}" />
+        <link rel="shortcut icon" type="image/png"
+                href="@{'/public/images/favicon.png'}" />
+    </head>
+    <body id="admin">
+
+        <div id="header">
+            <ul id="logout">
+                <li>
+                    <a href="@{Secure.logout()}">Log out</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <ul id="adminMenu">
+                #{secure.check 'admin'}
+                    <li class="${request.controller == 'Users' ? 'selected' : ''}">
+                        <a href="@{Users.list()}">Users</a>
+                    </li>
+                    <li class="${request.controller == 'Countries' ? 'selected' : ''}">
+                        <a href="@{Countries.list()}">Countries</a>
+                    </li>
+                #{/secure.check}
+            </ul>
+
+            #{doLayout /}
+        </div>
+
+        <div class="footer"><a href = "@{Admin.index()}">Admin login</a></div>
+
+
+    </body>
+</html>
