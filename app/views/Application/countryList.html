@@ -4,23 +4,24 @@
 <div>
     <h2>Countries</h2>
     #{if c}
-        <div >
-            There are <strong>${c.size()}</strong> countries
-
+        <div>
+            There are <strong>${c.size()}</strong> countries<br>
             <table>
                 <tr>
                     <th>Country Name</th>
+                    <th>Borders</th>
                     <th>Capital City</th>
                     <th>Cities</th>
                     <th>Population</th>
-                    <th>Borders</th>
+
                 </tr>
                 #{list items:c, as:'co'}
                 <tr>
                     <td>${co.name}</td>
+                    <td>${co.borders.join(',')}</td>
                     <td>${co.capital}</td>
-                    <td>${co.cities}<td>
-                    <td>${co.bordering}</td>
+                    <td>${co.cities.join(',')}</td>
+                    <td>${co.population}</td>
                  </tr>
                 #{/list}
             </table>

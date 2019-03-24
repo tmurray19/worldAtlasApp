@@ -1,33 +1,6 @@
-Country(ireland):
+Country(A):
     name: Ireland
     capital: Galway
-    population: 4000000
-    cities:
-        - Dublin
-        - Galway
-        - Cork
-        - Limerick
-    bordering:
-        - United Kingdom
-
-Country(uk):
-    name: United Kingdom
-    capital: London
-    population: 50000000
-    cities:
-        - London
-        - Birmingham
-        - Manchester
-    bordering:
-        - Ireland
-
-Country(us):
-    name: United States
-    capital: Washington DC
-    population: 350000000
-    cities:
-        - Washington DC
-        - New York City
-        - Los Angeles
-    bordering:
-        - Ireland
+    borders: [United Kingdom]
+    population: 4000000000000000000000
+    cities: [Galway, Cork, Dublin, Limerick]

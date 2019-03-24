@@ -15,7 +15,6 @@ public class Area extends Model{
 	// Has to be initialised as 0 here, so that values can be added correctly down the hirearchy
 	private long population;
 	private String name;
-	private ArrayList<String> pointsOfInterest = new ArrayList<>();
 	
 	// Set name
 	public void setName(String n) {
@@ -37,18 +36,5 @@ public class Area extends Model{
 		this.population = p;
 		
 	}
-	
-	// adds a point of interest to the arraylist
-	public void addPOI(String s) {
-		pointsOfInterest.add(s);
-	}
-	
-	// prints out all available points of interest in an area
-	public void getPOIs() {
-		for (String s: pointsOfInterest) {
-			System.out.println(s);
-		}
-	}
-	
 	
 }

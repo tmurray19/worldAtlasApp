@@ -5,7 +5,7 @@ package models;
 
 //import java.util.Iterator;
 import java.util.ArrayList;
- 
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -19,14 +19,24 @@ import play.db.jpa.*;
 
 
 @Entity
-public class Country extends Area{
+public class Country extends Model{
 	//Country Class
-	
+
 	//Initialising variables
-	private ArrayList<String> cities = new ArrayList<>();
-	private ArrayList<String> bordering = new ArrayList<>();
-	private String capital;
-	
+	private String name;
+    private ArrayList<String> cities;
+    private String capital;
+    private ArrayList<String> borders;
+    private long population;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	// Add a city to the city arrayList
 	public void setCities(ArrayList<String> cities) {
 		this.cities = cities;
@@ -36,15 +46,15 @@ public class Country extends Area{
 	public ArrayList<String> getCities(){
 		return this.cities;
 	}
-	
+
 	public void setBorders(ArrayList<String> bordering) {
-		this.bordering = bordering;
+		this.borders = bordering;
 	}
 
 	public ArrayList<String> getBorders(){
-		return this.bordering;
+		return this.borders;
 	}
-	
+
 	public String getCapital() {
 		return capital;
 	}
@@ -53,14 +63,25 @@ public class Country extends Area{
 		this.capital = capital;
 	}
 
-	// Constructor 
-	public Country(String name, long p, ArrayList<String> cities, ArrayList<String> bordering) {
+	// returns population
+	public long getPop() {
+		return this.population;
+	}
+
+	// sets population
+	public void setPop(long p) {
+		this.population = p;
+	}
+
+	// Constructor
+	public Country(String name, long p, ArrayList<String> bordering, String capital, ArrayList<String> cities) {
 		//Initialise Data
+		setBorders(bordering);
 		setName(name);
+		setCapital(capital);
 		setPop(p);
 		setCities(cities);
-		setBorders(bordering);
 	}
-	
+
 
 }
