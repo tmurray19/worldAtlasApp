@@ -1,7 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Trip Planner' /}
 
-<form action="@{TripController.setCountry(cityA, countryA, cityB, countryB)}" method="GET">
+<form action="@{TripController.planTrip(cityA, countryA, cityB, countryB)}" method="GET">
 
 
     <input type="text" name="cityA" />Current City<br>
