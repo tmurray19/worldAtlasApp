@@ -28,6 +28,9 @@
                     <li class="${request.controller == 'Countries' ? 'selected' : ''}">
                         <a href="@{Countries.list()}">Countries</a>
                     </li>
+                    <li class="${request.controller == 'Cities' ? 'selected' : ''}">
+                        <a href="@{Cities.list()}">Cities</a>
+                    </li>
                 #{/secure.check}
             </ul>
 

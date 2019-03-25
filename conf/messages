@@ -2,7 +2,12 @@
 # For example, for French create a messages.fr file
 #
 
-name = Username
+name = Name
 email = Email Address
 password = Password
 isAdmin = Should this user be an admin?
+population = Population
+capital = Capital City
+cities = List of Cities (seperated with ', ')
+borders = List of Borders (seperated with ', ')
+host = Country

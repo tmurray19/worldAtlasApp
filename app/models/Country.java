@@ -20,26 +20,28 @@ public class Country extends Area{
 	//Country Class
 
 	//Initialising variables
-    private ArrayList<String> cities;
+    private String cities;
     private String capital;
-    private ArrayList<String> borders;
+    private String borders;
 
-	// Add a city to the city arrayList
-	public void setCities(ArrayList<String> cities) {
+	public String getCities() {
+		return cities;
+	}
+
+	public void setCities(String cities) {
 		this.cities = cities;
 	}
 
-	// Returns the whole array to user
-	public ArrayList<String> getCities(){
-		return this.cities;
+	public String getBorders() {
+		return borders;
 	}
 
-	public void setBorders(ArrayList<String> bordering) {
-		this.borders = bordering;
+	public void setBorders(String borders) {
+		this.borders = borders;
 	}
 
-	public ArrayList<String> getBorders(){
-		return this.borders;
+	public String toString() {
+		return this.getName();
 	}
 
 	public String getCapital() {
@@ -52,7 +54,7 @@ public class Country extends Area{
 
 
 	// Constructor
-	public Country(String name, int population, ArrayList<String> bordering, String capital, ArrayList<String> cities) {
+	public Country(String name, int population, String bordering, String capital, String cities) {
 		//Initialise Data
 		setBorders(bordering);
 		setName(name);
@@ -61,8 +63,6 @@ public class Country extends Area{
 		setCities(cities);
 	}
 
-	public String toString() {
-		return this.getName();
-	}
+
     
 }
