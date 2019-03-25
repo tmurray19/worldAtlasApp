@@ -22,4 +22,9 @@ public class Admin extends Controller {
         render();
     }
     
+    
+    public static void countries() {
+    	List <Country> c = Country.findAll();
+    	render(c);
+    }
 }

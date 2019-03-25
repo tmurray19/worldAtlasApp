@@ -9,19 +9,19 @@
             <table>
                 <tr>
                     <th>Country Name</th>
-                    <th>Borders</th>
-                    <th>Capital City</th>
                     <th>Cities</th>
+                    <th>Capital City</th>
                     <th>Population</th>
+                    <th>Borders</th>
 
                 </tr>
                 #{list items:c, as:'co'}
                 <tr>
                     <td>${co.name}</td>
-                    <td>${co.borders.join(',')}</td>
+                    <td>${co.cities.join(', ')}</td>
                     <td>${co.capital}</td>
-                    <td>${co.cities.join(',')}</td>
                     <td>${co.population}</td>
+                    <td>${co.borders.join(', ')}</td>
                  </tr>
                 #{/list}
             </table>

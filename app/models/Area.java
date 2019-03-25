@@ -1,11 +1,11 @@
 package models;
 import java.util.ArrayList;
 
-import javax.persistence.*;
-
+import play.*;
 import play.db.jpa.*;
-
-
+ 
+import javax.persistence.*;
+import java.util.*;
 
 
 // An attempt at implementing polymorphism into the project
@@ -27,13 +27,13 @@ public class Area extends Model{
 	}
 	
 	// returns population
-	public long getPop() {
+	public long getPopulation() {
 		return this.population;
 	}
 	
 	// sets population
-	public void setPop(long p) {
-		this.population = p;
+	public void setPopulation(long population) {
+		this.population = population;
 		
 	}
 	

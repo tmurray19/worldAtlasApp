@@ -13,15 +13,12 @@ import play.data.validation.*;
 public class User extends Model {
  	
 	//@Required
-	//@MinSize(8)
 	public String name;
 	
 	//@Required
-	//@Email
 	public String email;
 	
 	//@Required
-	//@MaxSize(128)
 	public String password;
 	
 	public boolean isAdmin;
@@ -58,5 +55,9 @@ public class User extends Model {
 	
     public static User connect(String email, String password) {
         return find("byEmailAndPassword", email, password).first();
+    }
+    
+    public String toString() {
+    	return name;
     }
 }

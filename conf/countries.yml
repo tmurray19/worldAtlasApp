@@ -1,6 +1,27 @@
-Country(A):
+Country(ire):
     name: Ireland
     capital: Galway
     borders: [United Kingdom]
-    population: 4000000000000000000000
+    population: 4000000
     cities: [Galway, Cork, Dublin, Limerick]
+
+Country(uk):
+    name: United Kingdom
+    capital: Longdon
+    borders: [Ireland, France]
+    population: 500000000
+    cities: [London, Birmingham, Manchester]
+
+Country(us):
+    name: United States
+    capital: Washington DC
+    borders: [Canada, Mexico]
+    population: Country.setPop(350000000)
+    cities: [Washington DC, New York City, Los Angeles]
+
+Country(france):
+    name: France
+    capital: Paris
+    borders: [UK]
+    population: 800000000
+    cities: [Paris, Lyon, Bordeax]

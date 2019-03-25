@@ -5,3 +5,4 @@
 name = Username
 email = Email Address
 password = Password
+isAdmin = Should this user be an admin?

@@ -1,9 +1,5 @@
 package models;
 
-// This needs to print out population
-// Print out bordering countries
-
-//import java.util.Iterator;
 import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
@@ -11,31 +7,22 @@ import org.json.simple.JSONObject;
 
 import controllers.FileParser;
 
-
-import javax.persistence.*;
-
+import play.*;
 import play.db.jpa.*;
+ 
+import javax.persistence.*;
+import java.util.*;
 
 
 
 @Entity
-public class Country extends Model{
+public class Country extends Area{
 	//Country Class
 
 	//Initialising variables
-	private String name;
     private ArrayList<String> cities;
     private String capital;
     private ArrayList<String> borders;
-    private long population;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	// Add a city to the city arrayList
 	public void setCities(ArrayList<String> cities) {
@@ -63,25 +50,19 @@ public class Country extends Model{
 		this.capital = capital;
 	}
 
-	// returns population
-	public long getPop() {
-		return this.population;
-	}
-
-	// sets population
-	public void setPop(long p) {
-		this.population = p;
-	}
 
 	// Constructor
-	public Country(String name, long p, ArrayList<String> bordering, String capital, ArrayList<String> cities) {
+	public Country(String name, int population, ArrayList<String> bordering, String capital, ArrayList<String> cities) {
 		//Initialise Data
 		setBorders(bordering);
 		setName(name);
 		setCapital(capital);
-		setPop(p);
+		setPopulation(population);
 		setCities(cities);
 	}
 
-
+	public String toString() {
+		return this.getName();
+	}
+    
 }

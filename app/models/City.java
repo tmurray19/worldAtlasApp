@@ -12,10 +12,6 @@ import play.db.jpa.*;
 @Entity
 public class City extends Area{
 	
-	
-	public City(String name) {
-		setName(name);
-	}
-	
+
 	
 }

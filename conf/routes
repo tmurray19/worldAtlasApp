@@ -12,7 +12,7 @@ GET     /favicon.ico                            404
 GET     /public/                                staticDir:public
 
 # For list printout
-GET     /countries/                             Application.countryList()
+GET     /list/                                  Application.countryList()
 
 
 # For trip Planner
@@ -24,6 +24,8 @@ GET     /trip_planner/                          Application.tripPlanner
 # Administration
 GET     /admin/?                                Admin.index
 *       /admin                                  module:crud
+
+# GET     /countries/list                         Admin.countries
 
 
 # Catch all
