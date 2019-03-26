@@ -7,6 +7,8 @@ import java.util.*;
  
 import models.*;
  
+import play.test.*;
+
 @With(Secure.class)
 public class Admin extends Controller {
     
@@ -31,8 +33,13 @@ public class Admin extends Controller {
     
     // Uploads JSON file
     // TODO
+    // Read in File from Form
+    // Update file in database with file uploaded
+    // Reread the updated file 
     public static void uploadJSON() {
     	
+    	//Reloads countries model
+    	Fixtures.loadModels("countries.json");
     }
     
 }

@@ -26,19 +26,21 @@ public class Application extends Controller {
     	render(cit);
     }
     
+    // This code serves to generate and return the most efficient trip from one city to another
+    // Really, it's just a driver file for the Utility functions
+    // It passes the completed string to the HTML files
 	public static void planTrip(@Required Long startCityId, @Required Long endCityId) {
 		City from = City.findById(startCityId);
 		City to = City.findById(endCityId);
 		
+		// This line sends the user to the tripPlanner page
         if (validation.hasErrors()) {
             render("Application/tripPlanner.html");
         }
-		
-		System.out.println(from.getName());
-		System.out.println(to.getName());
 
+        // This line renders  the required string
 		if(from.getHost() == to.getHost()) {
-            flash.success("Bus from %s to %s", from.getName(), to.getName());
+            flash.success("%s");
 		}else {
             flash.error("No travel method available.");
 		}

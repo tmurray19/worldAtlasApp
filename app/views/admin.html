@@ -11,28 +11,33 @@
     </head>
     <body>
         <div id = "navigationBar" class = "box">
-            <ul id="adminMenu">
-                #{secure.check 'admin'}
-                    <li class="${request.controller == 'Users' ? 'selected' : ''}">
-                        <a href="@{Users.list()}">User List</a>
-                    </li>
-                    <li class="${request.controller == 'Countries' ? 'selected' : ''}">
-                        <a href="@{Countries.list()}">Country List</a>
-                    </li>
-                    <li class="${request.controller == 'Cities' ? 'selected' : ''}">
-                        <a href="@{Cities.list()}">City List</a>
-                    </li>
-                    <li>
-                        <a href="@{Admin.jsonUpload()}">Upload Country JSON File</a>
-                    </li>
-                    <li>
-                        <a href="@{Secure.logout()}">Log out</a>
-                    </li>
-                #{/secure.check}
-            </ul>
-          </div>
+            <a class = "buttonRegular" href="@{Application.index}">Home</a>
+            <a class = "buttonRegular" href = "@{Application.tripPlanner()}">Trip Planner</a>
+            <a class = "buttonRegular" href = "@{Application.countryList()}">Country List</a>
+        </div>
+        <div>
             #{doLayout /}
-
+            #{secure.check 'admin'}
+            You have admin privlidges! Here's what you can do:
+            <ul id="adminMenu">
+                <li class="${request.controller == 'Users' ? 'selected' : ''}">
+                    <a href="@{Users.list()}">View User List</a>
+                </li>
+                <li class="${request.controller == 'Countries' ? 'selected' : ''}">
+                    <a href="@{Countries.list()}">View Country List</a>
+                </li>
+                <li class="${request.controller == 'Cities' ? 'selected' : ''}">
+                    <a href="@{Cities.list()}">View City List</a>
+                </li>
+                <li>
+                    <a href="@{Admin.jsonUpload()}">Upload Country JSON File</a>
+                </li>
+                <li>
+                    <a href="@{Secure.logout()}">Log out</a>
+                </li>
+            </ul>
+            #{/secure.check}
+          </div>
         <div class="footer"><a href = "@{Admin.index()}">Admin login</a></div>
 
 

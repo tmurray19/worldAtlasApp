@@ -11,6 +11,8 @@
     <body>
         <div id = "navigationBar" class = "box">
             <a class = "buttonRegular" href="@{Application.index}">Home</a>
+            <a class = "buttonRegular" href = "@{Application.tripPlanner()}">Trip Planner</a>
+            <a class = "buttonRegular" href = "@{Application.countryList()}">Country List</a>
         </div>
         #{doLayout /}
         <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
