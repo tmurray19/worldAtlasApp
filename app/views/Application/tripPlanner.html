@@ -10,7 +10,7 @@
 #{/ifErrors}
 
 
-#{form @tripController.planTrip()}
+#{form @Application.planTrip(startCityId, endCityId)}
 
 #{if cit}
 <div>
@@ -19,21 +19,32 @@
     #{select 'startCityId', items:cit, valueProperty:'id', labelProperty:'name', id:'startCityId'/}
   </p>
 </div>
-
-
 <div>
   <p>
     <strong>Select destination city:</strong>
     #{select 'endCityId', items:cit, valueProperty:'id', labelProperty:'name', id:'endCityId'/}
   </p>
 </div>
-
-<div>
-  <input type="submit" value = "Plan Trip"/>
-</div>
-#{/form}
 #{/if}
 #{else}
 <div>
   No cities have been found
 </div>
+#{/else}
+<div>
+  <input type="submit" value = "Plan Trip"/>
+</div>
+#{/form}
+
+
+#{if flash.success}
+<div>
+    <p style="color:green">${flash.success}</p>
+</div>
+#{/if}
+
+#{if flash.error}
+<div>
+    <p style="color:red">${flash.error}</p>
+</div>
+#{/if}

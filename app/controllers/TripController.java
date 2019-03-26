@@ -27,8 +27,6 @@ public class TripController extends Controller {
 		render(countryA, countryB, cityA, cityB);
 	}
 	
-	public void planTrip() {
-		
-	}
+
 	
 }

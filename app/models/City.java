@@ -16,12 +16,20 @@ public class City extends Area{
 	public Country host;
 	
 	public City(Country host, String name) {
-		this.host = host;
+		setHost(host);
 		setName(name);
 	}
 	
 	public String toString() {
 		return this.getName();
+	}
+
+	public Country getHost() {
+		return host;
+	}
+
+	public void setHost(Country host) {
+		this.host = host;
 	}
 
 	

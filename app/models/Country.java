@@ -14,7 +14,10 @@ import javax.persistence.*;
 import java.util.*;
 
 
-
+// I couldn't produce the same Country class as last assignment
+// JPA doesn't allow for editing of ArrayList in it's CRUD module
+// I instead opt to store the borders and cities in a string
+// Then split that string up where necessary
 @Entity
 public class Country extends Area{
 	//Country Class

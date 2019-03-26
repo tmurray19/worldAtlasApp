@@ -2,13 +2,14 @@
 <classpath>
 	<classpathentry excluding="japidviews/**|rythm/**|views/**" kind="src" path="app"/>
 	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="secure"/>
+	<classpathentry kind="src" path="docviewer"/>
 	<classpathentry kind="src" path="crud"/>
 	<classpathentry kind="src" path="docviewer"/>
-	<classpathentry kind="src" path="secure"/>
 	
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="E:\Programs\play-1.5.2\framework\play-1.5.2.jar" sourcepath="E:/programs/play-1.5.2/framework/src" />
-	<classpathentry kind="lib" path="E:\University Work\School Work\4th Year\Semester 2\worldAtlasApp\lib\json-simple-1.1.1.jar" sourcepath="C:\Users\Crazy\.ivy2\cache\com.googlecode.json-simple\json-simple\sources\json-simple-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="E:\University Work\School Work\4th Year\Semester 2\worldAtlasApp\lib\json-simple-1.1.1.jar" sourcepath="C:\Users\Taidgh\.ivy2\cache\com.googlecode.json-simple\json-simple\sources\json-simple-1.1.1-sources.jar"/>
 	<classpathentry kind="lib" path="E:\Programs\play-1.5.2\modules\docviewer\lib\play-docviewer.jar"/>
 	<classpathentry kind="lib" path="E:\Programs\play-1.5.2\framework\lib\activation-1.1.1.jar"/>
 	<classpathentry kind="lib" path="E:\Programs\play-1.5.2\framework\lib\antlr-2.7.7.jar"/>

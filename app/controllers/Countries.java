@@ -6,7 +6,7 @@ import play.mvc.*;
 import java.util.*;
 
 import models.*;
-
+// List of countries
 @Check("admin")
 @With(Secure.class)
 @CRUD.For(Country.class)
