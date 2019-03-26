@@ -1,16 +1,39 @@
 #{extends 'main.html' /}
 #{set title:'Trip Planner' /}
 
-<form action="@{TripController.planTrip(cityA, countryA, cityB, countryB)}" method="GET">
 
 
-    <input type="text" name="cityA" />Current City<br>
-    <input type="text" name="countryA" />Current Country<br>
+<H1>Trip Planner</H1>
 
-    <br>
+#{ifErrors}
+  <p style="color:purple">All fields are required</p>
+#{/ifErrors}
 
-    <input type="text" name="cityB" />Destination City<br>
-    <input type="text" name="countryB" />Destination Country<br>
 
-    <input type="submit" value="Plan trip" />
-</form>
+#{form @tripController.planTrip()}
+
+#{if cit}
+<div>
+  <p>
+    <strong>Select a starting city:</strong>
+    #{select 'startCityId', items:cit, valueProperty:'id', labelProperty:'name', id:'startCityId'/}
+  </p>
+</div>
+
+
+<div>
+  <p>
+    <strong>Select destination city:</strong>
+    #{select 'endCityId', items:cit, valueProperty:'id', labelProperty:'name', id:'endCityId'/}
+  </p>
+</div>
+
+<div>
+  <input type="submit" value = "Plan Trip"/>
+</div>
+#{/form}
+#{/if}
+#{else}
+<div>
+  No cities have been found
+</div>

@@ -1,0 +1,12 @@
+#{extends 'admin.html' /}
+
+
+<H1>JSON File Uploader</H1>
+
+
+
+#{form @uploadJSON(), enctype: 'multipart/form-data'}
+  <H2>Please upload JSON file here:</H2>
+  <input type="file" name="jsonData" id="jsonData"/>
+  <input type="submit" value="Upload File" />
+#{/}

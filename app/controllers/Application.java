@@ -14,13 +14,6 @@ public class Application extends Controller {
         render();
     }
 
-
-    // Renders say hello page (TESTING)
-    public static void sayHello(String myName){
-        render(myName);
-    }
-
-
     // Renders country list
     public static void countryList(String s) {
     	List <Country> c = Country.findAll();
@@ -29,13 +22,7 @@ public class Application extends Controller {
 
     // Renders trip planner
     public static void tripPlanner(){
-      render();
+    	List <City> cit = City.findAll();
+    	render(cit);
     }
-    
-    
-    public static void lister() {
-    }
-    
-    
-    
 }

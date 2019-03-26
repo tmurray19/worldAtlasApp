@@ -10,6 +10,7 @@ import models.*;
 @With(Secure.class)
 public class Admin extends Controller {
     
+	// Connects Admin
     @Before
     static void setConnectedUser() {
         if(Security.isConnected()) {
@@ -18,13 +19,20 @@ public class Admin extends Controller {
         }
     }
  
+    // Renders index page
     public static void index() {
         render();
     }
     
-    
-    public static void countries() {
-    	List <Country> c = Country.findAll();
-    	render(c);
+    // Renders upload page
+    public static void jsonUpload() {
+    	render();
     }
+    
+    // Uploads JSON file
+    // TODO
+    public static void uploadJSON() {
+    	
+    }
+    
 }
