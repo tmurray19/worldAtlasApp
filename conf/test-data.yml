@@ -1,0 +1,48 @@
+Region(irel):
+
+City(irelGalway):
+
+City(irelCork):
+
+City(irelDublin):
+
+City(irelLimerick):
+
+
+Region(irel):
+    name: IRe
+    capital: irelDublin
+    borders: uki
+    population: 4500000
+    cities: irelGalway, irelCork, irelDublin, irelLimerick
+
+City(irelGalway):
+    host: irel
+    name: Galw
+City(irelCork):
+    host: irel
+    name: Co
+City(irelDublin):
+    host: irel
+    name: Dub
+City(irelLimerick):
+    host: irel
+    name: Limer
+
+
+Test(uki):
+    name: U K
+    capital: ukiLondon
+    borders: irel
+    population: 66000000
+    cities: ukiLondon, ukiBirmingham, ukiManchester
+
+City(ukiLondon):
+    host: uki
+    name: Lond
+City(ukiBirmingham):
+    host: uki
+    name: Birming
+City(ukiManchester):
+    host: uki
+    name: Manche

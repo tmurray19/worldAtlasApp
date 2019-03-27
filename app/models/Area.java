@@ -1,5 +1,4 @@
 package models;
-import java.util.ArrayList;
 
 import play.*;
 import play.db.jpa.*;
@@ -13,8 +12,8 @@ import java.util.*;
 public class Area extends Model{
 	// Initialising variables
 	// Has to be initialised as 0 here, so that values can be added correctly down the hirearchy
-	private long population;
-	private String name;
+	public long population;
+	public String name;
 	
 	// Set name
 	public void setName(String n) {
@@ -34,7 +33,6 @@ public class Area extends Model{
 	// sets population
 	public void setPopulation(long population) {
 		this.population = population;
-		
 	}
 	
 }

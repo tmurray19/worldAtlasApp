@@ -19,7 +19,7 @@ public class City extends Area{
 		setHost(host);
 		setName(name);
 	}
-	
+	 
 	public String toString() {
 		return this.getName();
 	}

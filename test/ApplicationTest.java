@@ -15,8 +15,8 @@ public class ApplicationTest extends FunctionalTest {
     }
 
     @Test
-    pubic void setUpCountry(){
-        Country d = new Country();
+    public void setUpCountry(){
+        //Country d = new Country();
     }
 
 }

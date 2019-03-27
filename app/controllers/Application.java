@@ -15,9 +15,15 @@ public class Application extends Controller {
     }
 
     // Renders country list
-    public static void countryList(String s) {
+    public static void countryList() {
     	List <Country> c = Country.findAll();
     	render(c);
+    }
+    
+    // Renders country list
+    public static void regionList() {
+    	//List <Test> t = Test.findAll();
+    	//render(t);
     }
 
     // Renders trip planner
@@ -34,17 +40,30 @@ public class Application extends Controller {
 		City to = City.findById(endCityId);
 		
 		// This line sends the user to the tripPlanner page
+		// In the case that something goes wrong
+		// This also sends the user to the page on the first time clicking the link
+		// So that users can pick the places they want to travel from and to
         if (validation.hasErrors()) {
             render("Application/tripPlanner.html");
         }
 
         // This line renders  the required string
-		if(from.getHost() == to.getHost()) {
-            flash.success("%s");
-		}else {
-            flash.error("No travel method available.");
+        
+        // If the cities DON'T have the same name:
+		if(!(from.getName() == to.getName())) {
+			// Calls trip planner function
+            flash.success("%s", Utility.tripPlan(from, to));
+        // Otherwise
+        // If they have the same name
+		}else if(from.getName() == to.getName()) {
+			// Tell the user movement is unnecessary
+			flash.error("You are already in this city.");		
 		}
-		
+		// Otherwise
+		else {
+			// Tell user that movement is impossible
+			flash.error("Method of travel unavailable.");
+		}
 		tripPlanner();
 	}
 	
