@@ -23,9 +23,9 @@ public class Country extends Area{
 	//Country Class
 
 	//Initialising variables
-    private String cities;
-    private String capital;
-    private String borders;
+    public String cities;
+    public String capital;
+    public String borders;
  
 	public String getCities() {
 		return cities;

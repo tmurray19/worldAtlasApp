@@ -5,11 +5,23 @@
 
 
 
-#{form @uploadJSON(), enctype: 'multipart/form-data'}
-  <H2>Please upload JSON file here:</H2>
-  <input type="file" name="jsonData" id="jsonData"/>
-  <input type="submit" value="Upload File" />
+<div>
+#{form @uploadJSON(), enctype:'multipart/form-data'}
+    <h2>Upload a JSON data file:</h2>
+    <input type="file" id="jsonData" name="jsonData" />
+    <input type="submit" value="Upload" />
 #{/}
+</div>
 
 
-Fixtures.loadModels("countries.json");
+#{if flash.success}
+<div>
+    <p style="color:green">${flash.success}</p>
+</div>
+#{/if}
+
+#{if flash.error}
+<div>
+    <p style="color:red">${flash.error}</p>
+</div>
+#{/if}

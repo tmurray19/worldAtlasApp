@@ -6,3 +6,4 @@ require:
     - play -> crud
     - com.googlecode.json-simple -> json-simple 1.1.1
     - secure
+    - org.json -> json 20180813
