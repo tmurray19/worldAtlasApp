@@ -1,8 +1,5 @@
 package controllers;
-/*
 
-
-package controllers;
 
 import play.*;
 import play.mvc.*;
@@ -16,4 +13,3 @@ import models.*;
 public class Regions extends CRUD {
 
 }
-*/

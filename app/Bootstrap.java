@@ -16,14 +16,16 @@ public class Bootstrap extends Job {
         	// Auto generates users
             Fixtures.loadModels("user-data.yml");
         }
+        
+        // Same for country data
         if(Country.count() == 0) {
         	Fixtures.loadModels("countries.json");
         }
-      /*
-        if(Region.count() == 0) {
-          Fixtures.loadModels("test-data.yml");
-        }
-       */
+      
+        //if(Region.count() == 0) {
+          //Fixtures.loadModels("test-data.yml");
+        //}
+       
     }
 
 }

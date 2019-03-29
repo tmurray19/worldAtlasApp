@@ -26,7 +26,7 @@ public class Country extends Area{
     private String cities;
     private String capital;
     private String borders;
-
+ 
 	public String getCities() {
 		return cities;
 	}

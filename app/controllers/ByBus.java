@@ -11,8 +11,7 @@ public class ByBus implements StrategyPlanner{
 	
 		return "Move from " + cityA.getName() + ", " + conA.getName() 
 		+ " to " + 
-		cityB.getName() + ", " + conB.getName() + " by Bus\n";
-		
+		cityB.getName() + ", " + conB.getName() + " by Bus.\n";
 	}
 
 }

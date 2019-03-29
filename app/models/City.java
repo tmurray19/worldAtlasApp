@@ -15,6 +15,8 @@ public class City extends Area{
 	@ManyToOne
 	public Country host;
 	
+	public boolean isCapital;
+
 	public City(Country host, String name) {
 		setHost(host);
 		setName(name);
@@ -33,4 +35,6 @@ public class City extends Area{
 	}
 
 	
+
+
 }

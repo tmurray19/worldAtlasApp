@@ -1,4 +1,8 @@
-package models;
+
+
+/*
+ package models;
+ 
 
 import play.*;
 import play.db.jpa.*;
@@ -7,30 +11,37 @@ import javax.persistence.*;
 import java.util.*;
 
 
+import play.data.binding.*;
+import play.data.validation.*;
+
 // I couldn't produce the same Country class as last assignment
 // JPA doesn't allow for editing of ArrayList in it's CRUD module
 // I instead opt to store the borders and cities in a string
 // Then split that string up where necessary
 @Entity
-public class Region extends Model{
+public class Region extends Area{
 	//Country Class
 
 	//Initialising variables
 	public String name;
-	@ManyToMany
-    public Set<City> cities;
+	@Column
+	@ElementCollection(targetClass=City.class)
+	@OneToMany   
+	public List<City> cities;
 	public City capital;
-	public long population;
-	@ManyToMany
-    public Set<Region> borderState;
+	//@Cascade(CascadeType.SAVE_UPDATE)
+	//@ManyToOne  
+	@Column
+	@ElementCollection(targetClass=Region.class)
+    public List<Region> borderState;
     
     
 
-	public Set<City> getCities() {
+	public List<City> getCities() {
 		return cities;
 	}
 
-	public void setCities(Set<City> cities) {
+	public void setCities(List<City> cities) {
 		this.cities = cities;
 	}
 
@@ -48,13 +59,13 @@ public class Region extends Model{
 
 
 
-	public Set<Region> getBorders() {
+	public List<Region> getBorders() {
 		return borderState;
 	}
 
 
 
-	public void setBorders(Set<Region> borders) {
+	public void setBorders(List<Region> borders) {
 		this.borderState = borders;
 	}
     
@@ -65,17 +76,27 @@ public class Region extends Model{
 	//}
 
 
+	public void addBordering(Region region) {
+		this.borderState.add(region);
+		if (!region.getBorderingCountries().contains(this))
+			region.addBordering(this);
+	}
+
+	public List<Region> getBorderingCountries() {
+		return borderState;
+	}
 
 	// Constructor
-	public Region(String name, int population, Set<Region> bordering, City capital, Set<City> cities) {
+	public Region(String name, int population, List<Region> bordering, City capital, List<City> cities) {
 		//Initialise Data
 		setBorders(bordering);
-	//	setName(name);
+		setName(name);
 		setCapital(capital);
-	//	setPopulation(population);
+		setPopulation(population);
 		setCities(cities);
 	}
 
 
     
 }
+*/
