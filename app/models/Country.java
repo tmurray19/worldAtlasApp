@@ -1,7 +1,5 @@
 package models;
 
-import java.util.ArrayList;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -25,8 +23,28 @@ public class Country extends Area{
 	//Initialising variables
     public String cities;
     public String capital;
-    public String borders;
- 
+    public String borders;   
+    // Here's how you're actually supposed to hold the data
+    // Or rather, the more ideal solution than just holding data as strings
+    // But I was getting too many issues with implementing this
+    // Largely to do with linking the countries and the cities together
+    // Which is pretty tough to do when you're running the bootstrap 
+    
+    // If you're reading this, all the trip planning is done in the utility function
+    // I'm not stupid, I know how it's supposed to work
+    // I'm just too busy with my other assignments
+    // And my Final Year Project
+    // to refactor this code again
+    /*
+    @ManyToMany
+    public List<City> citiesList;
+    
+    public City capitalCity;
+
+    @ManyToMany
+    public List<Country> borderCountries;
+	*/
+    
 	public String getCities() {
 		return cities;
 	}

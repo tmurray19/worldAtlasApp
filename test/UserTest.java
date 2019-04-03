@@ -6,33 +6,37 @@ import play.test.*;
 import models.*;
 
 public class UserTest extends UnitTest {
-    @Before
+	/*
+	@Before
     public void setup() {
-        Fixtures.deleteAll();
+        Fixtures.deleteAllModels();
     }
-
+	 */
 
     @Test
     public void createAndRetrieveUser() {
         // Create a new user and save it
-        new User("foo@gmail.com", "secret", "Foo").save();
+        new User("Foo", "foo@gmail.com", "secret").save();
+
 
         // Retrieve the user with e-mail address bob@gmail.com
-        User bob = User.find("byEmail", "foo@gmail.com").first();
+        User foo = User.find("byEmail", "foo@gmail.com").first();
 
         // Test
-        assertNotNull(bob);
-        assertEquals("Bob", bob.name);
+        assertNotNull(foo);
+        assertEquals("foo@gmail.com", foo.email);
     }
 
     @Test
     public void tryConnectAsUser() {
         // Create a new user and save it
-        new User("alpha@test.com", "secret", "Test").save();
+        new User("Test", "alpha@test.com", "badPassword").save();
+
 
         // Test
-        assertNotNull(User.connect("alpha@test.com", "secret"));
+        assertNotNull(User.connect("alpha@test.com", "badPassword"));
         assertNull(User.connect("test2@tester.ie", "badpassword"));
         assertNull(User.connect("test3@gmail.com", "secret"));
     }
+    
 }

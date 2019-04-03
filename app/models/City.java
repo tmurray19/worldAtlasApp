@@ -1,4 +1,5 @@
 package models;
+import java.util.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,7 +17,7 @@ public class City extends Area{
 	public Country host;
 	
 	public boolean isCapital;
-
+	
 	public City(Country host, String name) {
 		setHost(host);
 		setName(name);

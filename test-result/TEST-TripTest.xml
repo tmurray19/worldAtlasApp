@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="1.513" errors="0" skipped="0" tests="3" name="TripTest">
+  <testcase classname="TripTest" name="testBus" time="0.623">
+      </testcase>
+  <testcase classname="TripTest" name="testPlane" time="0.488">
+      </testcase>
+  <testcase classname="TripTest" name="testTrain" time="0.402">
+      </testcase>
+</testsuite>

@@ -7,6 +7,7 @@ import models.*;
 
 // This file serves to auto generate the users and the countries in the yml/json files
 // Just for showcase/testing purpose
+// Pretty average stuff
 @OnApplicationStart
 public class Bootstrap extends Job {
 
