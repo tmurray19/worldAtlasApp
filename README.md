@@ -23,7 +23,10 @@ Webapp implementation of CT548 assignment 1
       "name": "Other City"
     },
     ...
-    
+    * It also stores the border countries and cities as strings instead of Country classes and City Classes as arraylists
+    * The reason I implemented it in this way is because one of the requirements was updating the data from the admin panel
+    * And I couldn't get arrayLists or Lists or Sets to work within the panel
+
 
   * Instead of ArrayLists or Sets or Lists, the Cities and Bordering Countries are kept as Strings
   * The burden is then on trip planning file to link these up in the database with the corresponding countries
