@@ -20,9 +20,11 @@ public class Bootstrap extends Job {
         
         // Same for country data
         if(Country.count() == 0) {
-        	Fixtures.loadModels("countries.json");
+        	Fixtures.loadModels("data.json");
         }
       
+        // For testing purposes
+        
         //if(Region.count() == 0) {
           //Fixtures.loadModels("test-data.yml");
         //}

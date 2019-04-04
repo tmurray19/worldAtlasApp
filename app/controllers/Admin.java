@@ -57,11 +57,10 @@ public class Admin extends Controller {
 			// Creates an inputStream for the file uploaded by user
 			InputStream input = new FileInputStream(jsonData);
 			// Attempts to write data to file
-			countryPopulator(input);
+			cityPopulator(input);
 			// Tells user upload was successful
-			flash.success("File uploaded successfully and database updated");
+			flash.success("File uploaded successfully.");
 		} 
-		
 		
 		// For catching reading and writing errors
 		catch (FileNotFoundException fe) {
@@ -75,17 +74,15 @@ public class Admin extends Controller {
     }
 
 	
-	private static void countryPopulator(InputStream input)	throws DataFormatException, UnsupportedEncodingException, IOException, ParseException{
-		// For parsing json file
+	// Overwrites data that exists in database
+	private static void cityPopulator(InputStream input)	throws DataFormatException, UnsupportedEncodingException, IOException, ParseException{
 		JSONParser jsonParser = new JSONParser();
 		// Creates and populates jsonObject with filestreamed data from file uploaded by user
 		JSONObject jsonObject = (JSONObject)jsonParser.parse(
-		      new InputStreamReader(input, "UTF-8"));
-		// Attepmts to write data to established countries.json file
-		try (FileWriter file = new FileWriter("conf/countries.json")) {
-			file.write(jsonObject.toString());
+		      new InputStreamReader(input, "UTF-8"));		// Attepmts to write data to established countries.json file
+		try (FileWriter dataWriter = new FileWriter("data.json", false)) {
+			dataWriter.write(jsonObject.toJSONString(jsonObject));
 		}
-		
 		
 	}
 	

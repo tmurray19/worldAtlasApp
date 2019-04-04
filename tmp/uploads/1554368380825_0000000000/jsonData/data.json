@@ -1,0 +1,116 @@
+{
+  "Country(ire)": {
+    "name": "Ireland",
+    "capital": "Dublin",
+    "borders": "United Kingdom",
+    "population": 4500000,
+    "cities": " Dublin, Galway, Cork, Limerick"
+  },
+  "City(ireGalway)": {
+    "host": "ire",
+    "name": "Galway"
+  },
+  "City(ireCork)": {
+    "host": "ire",
+    "name": "Cork"
+  },
+  "City(ireDublin)": {
+    "host": "ire",
+    "name": "Dublin",
+  },
+  "City(ireLimerick)": {
+    "host": "ire",
+    "name": "Limerick"
+  },
+  "Country(uk)": {
+    "name": "United Kingdom",
+    "capital": "London",
+    "borders": "Ireland, France",
+    "population": 66000000,
+    "cities": "London, Birmingham, Manchester"
+  },
+  "City(ukLondon)": {
+    "host": "uk",
+    "name": "London",
+  },
+  "City(ukBirmingham)": {
+    "host": "uk",
+    "name": "Birmingham"
+  },
+  "City(ukManchester)": {
+    "host": "uk",
+    "name": "Manchester"
+  },
+  "Country(us)": {
+    "name": "United States",
+    "capital": "Washington DC",
+    "borders": "Canada, Mexico",
+    "population": 327000000,
+    "cities": "Washington DC, New York City, Los Angeles"
+  },
+  "City(usWashington)": {
+    "host": "us",
+    "name": "Washington DC"
+  },
+  "City(usNyc)": {
+    "host": "us",
+    "name": "New York City"
+  },
+  "City(usLa)": {
+    "host": "us",
+    "name": "Los Angeles"
+  },
+  "Country(france)": {
+    "name": "France",
+    "capital": "Paris",
+    "borders": "United Kingdom",
+    "population": 67000000,
+    "cities": "Paris, Lyon, Bordeaux"
+  },
+  "City(franceParis)": {
+    "host": "france",
+    "name": "Paris"
+  },
+  "City(franceLyon)": {
+    "host": "france",
+    "name": "Lyon"
+  },
+  "City(franceBordeaux)": {
+    "host": "france",
+    "name": "Bordeaux"
+  },
+  "Country(mexico)": {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "borders": "United States",
+    "population": 90000000,
+    "cities": "Mexico City, Tijuana, Acapulco"
+  },
+  "City(mexicoCity)": {
+    "host": "mexico",
+    "name": "Mexico City"
+  },
+  "City(mexicoTijuana)": {
+    "host": "mexico",
+    "name": "Tijuana"
+  },
+  "City(mexicoAcapulco)": {
+    "host": "mexico",
+    "name": "Acapulco"
+  },
+  "Country(canada)": {
+    "name": "Canada",
+    "capital": "Ottawa",
+    "borders": "United States",
+    "population": 60000000,
+    "cities": "Ottawa, Toronto"
+  },
+  "City(canadaToronto)": {
+    "host": "canada",
+    "name": "Toronto"
+  },
+  "City(canadaOttawa)": {
+    "host": "canada",
+    "name": "Ottawa"
+  }
+}

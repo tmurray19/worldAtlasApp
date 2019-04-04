@@ -39,4 +39,10 @@ public class UserTest extends UnitTest {
         assertNull(User.connect("test3@gmail.com", "secret"));
     }
     
+    @After
+    public void teardown() {
+    	Fixtures.delete(User.class);
+        Fixtures.loadModels("user-data.yml");
+    }
+    
 }
